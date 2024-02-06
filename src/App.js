@@ -7,6 +7,7 @@ import Product from "./component/Product";
 import FAQ from "./component/Faq";
 import Blog from "./component/Blog";
 import Explore from "./component/Explore";
+import Button from "react-bootstrap/Button";
 
 function App() {
   return (

@@ -1,23 +1,40 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import logo from "../image/logo.png";
+
 function NavBar() {
   return (
-    <div className="navbar">
+    <div className="nav-container">
       <div className="logo">
-        <span>& Healthh</span>
+        <span>
+          {" "}
+          <img src={logo} alt="" />{" "}
+        </span>
       </div>
-      <Link to="/">Home</Link>
+      <div className="navbar">
+        <NavLink className="nav-link" to="/">
+          Home
+        </NavLink>
 
-      <Link to="/product">Product</Link>
+        <NavLink className="nav-link" to="/product">
+          Product
+        </NavLink>
 
-      <Link to="/faq">FAQ</Link>
+        <NavLink className="nav-link" to="/faq">
+          FAQ
+        </NavLink>
 
-      <Link to="/about">About Us</Link>
+        <NavLink className="nav-link" to="/about">
+          About Us
+        </NavLink>
 
-      <Link to="/blog">Blog</Link>
+        <NavLink className="nav-link" to="/blog">
+          Blog
+        </NavLink>
 
-      <Link to="/Explore" className="explore">
-        Explore
-      </Link>
+        <NavLink className="btn-exp" to="/Explore">
+          Explore
+        </NavLink>
+      </div>
     </div>
   );
 }

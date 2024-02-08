@@ -187,3 +187,19 @@ img {
   color: #000000;
   margin-top: 15px;
 }
+.Accord {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* This will center the div vertically */
+}
+
+.yellow {
+  color: #fac829;
+}
+
+/* Style for Asked in blue */
+.blue {
+  color: #203164;
+}

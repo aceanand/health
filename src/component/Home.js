@@ -2,6 +2,8 @@ import React from "react";
 import img from "../Plastic.png";
 import About from "./About";
 import FAQ from "./Faq";
+import Explore from "./Explore";
+import Product from "./Product";
 function Home() {
   return (
     <div>
@@ -17,7 +19,6 @@ function Home() {
       </div>
       <div class="content">
         <h1>Protein X</h1>
-        <p>This is paragraph</p>
 
         <svg
           class="svg1"
@@ -59,7 +60,7 @@ function Home() {
         <img src={img} alt="" />
       </div>
 
-      <div class="faqs">
+      <div>
         <FAQ />
       </div>
     </div>

@@ -38,6 +38,7 @@
   text-decoration: none;
 }
 
+/* Home Page*/
 .home-container {
   max-height: 691px;
   background-color: #203164;
@@ -165,7 +166,7 @@ img {
 
   border-radius: 50%;
 }
-/* CSS for the first paragraph */
+
 .p1 {
   position: absolute;
 
@@ -187,19 +188,100 @@ img {
   color: #000000;
   margin-top: 15px;
 }
-.Accord {
+
+/* FAQ Page */
+.accordion {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh; /* This will center the div vertically */
+  height: 100vh;
+}
+.accordion h6 {
+  color: #203164;
+}
+.accordion h3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.accordion p {
+  color: #6380d9;
+
+  font-size: 15px;
 }
 
 .yellow {
+  left: 16rem;
+  width: 25.13rem;
+  position: relative;
+  font-size: 2rem;
+  line-height: 100%;
+  font-weight: 600;
+  display: inline-block;
+  text-shadow: 1px 0 0#000, 0 1px 0#000, -1px 0 0#000, 0-1px 0#000;
   color: #fac829;
 }
 
-/* Style for Asked in blue */
 .blue {
+  left: 1rem;
+  width: 30.13rem;
+  position: relative;
+  font-size: 2rem;
+  line-height: 100%;
+  font-weight: 600;
   color: #203164;
+}
+
+/* faq */
+.wrapper {
+  display: flex;
+  height: 527px;
+  width: 1100px;
+  justify-content: center;
+  align-items: center;
+}
+
+.accordion {
+  width: 832px;
+  height: 173px;
+}
+
+.item {
+  border: 1px solid #e6dada;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  padding: 10px 20px;
+}
+
+.title {
+  color: #004080;
+  font-size: 16px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.content {
+  margin-left: 10px;
+  color: #004080;
+
+  font-size: 15px;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0, 1, 0, 1);
+}
+
+.content.show {
+  height: auto;
+  max-height: 9999px;
+  transition: all 0.5s cubic-bezier(0, 1, 0, 1);
+}
+
+.question {
+  color: rgb(200, 17, 41); /* Change the color as needed */
+  font-size: 18px; /* Adjust font size as needed */
+  font-weight: regular; /* Make the font bold */
 }

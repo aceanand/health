@@ -1,8 +1,9 @@
 import React from "react";
+
 function Product() {
   return (
     <div>
-      <h1>This is Product Page.</h1>
+      <h1>This is Product</h1>
     </div>
   );
 }

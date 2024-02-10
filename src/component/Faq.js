@@ -1,64 +1,55 @@
 import React from "react";
-
-import Accordion from "react-bootstrap/Accordion";
-
+import { useState } from "react";
 function FAQ() {
-  return (
-    <div class="Accord">
-      <h6>FAQS</h6>
-      <h2>
-        <span class="yellow">frequently</span> <span class="blue">Asked</span>{" "}
-        Questions
-      </h2>
+  const [selected, setSelected] = useState(null);
 
-      <p>
-        Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry.
-      </p>
-      <div>
-        <Accordion defaultActiveKey="0">
-          <Accordion.Item eventKey="0">
-            <Accordion.Header>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum{" "}
-            </Accordion.Header>
-            <Accordion.Body>
-              {" "}
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry.
-            </Accordion.Body>
-          </Accordion.Item>
-          <Accordion.Item eventKey="1">
-            <Accordion.Header>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum{" "}
-            </Accordion.Header>
-            <Accordion.Body>Content for Accordion Item #2</Accordion.Body>
-          </Accordion.Item>
-          <Accordion.Item eventKey="2">
-            <Accordion.Header>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum{" "}
-            </Accordion.Header>
-            <Accordion.Body>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum{" "}
-            </Accordion.Body>
-          </Accordion.Item>
-          <Accordion.Item eventKey="3">
-            <Accordion.Header>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum{" "}
-            </Accordion.Header>
-            <Accordion.Body>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum{" "}
-            </Accordion.Body>
-          </Accordion.Item>
-        </Accordion>
+  const toggle = (i) => {
+    if (selected === i) {
+      return setSelected(null);
+    }
+    setSelected(i);
+  };
+
+  return (
+    <div className="wrapper">
+      <div className="accordion">
+        <h6>FAQS</h6>
+        <h3>
+          <span class="yellow">Frequently</span>
+          <span class="blue">asked questions</span>
+        </h3>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting.</p>
+        {data.map((item, i) => (
+          <div className="item">
+            <div className="title" onClick={() => toggle(i)}>
+              <h2>{item.question}</h2>
+              <span>{selected == i ? " - " : " + "}</span>
+            </div>
+            <div className={selected == i ? "content show" : "content"}>
+              {item.answer}
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );
 }
+
+const data = [
+  {
+    question: "Lorem Ipsum is simply dummy text of the printing",
+    answer: "Lorem Ipsum is simply dummy text of the printing and typesetting",
+  },
+
+  {
+    question: "Lorem Ipsum is simply dummy text of the printing",
+    answer: "Lorem Ipsum is simply dummy text of the printing.",
+  },
+
+  {
+    question: "Lorem Ipsum is simply dummy text of the printing",
+    answer: "Lorem Ipsum is simply dummy text of the printing and typesetting",
+  },
+];
 
 export default FAQ;
